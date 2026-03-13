@@ -1,0 +1,28 @@
+# Project Configuration for Processed Dataset
+paths:
+  train_data: "processed_dataset/cleaned_twitter_training.csv"
+  val_data: "processed_dataset/cleaned_twitter_validation.csv"
+  processed_dir: "processed_dataset"
+  logs_path: "logs"
+  model_save_dir: "models/roberta_sentiment"
+
+data_loader:
+  columns:
+    - "sentiment"
+    - "text"
+  target_column: "sentiment"
+  text_column: "text"
+  has_header: true
+
+model_params:
+  model_name: "cardiffnlp/twitter-roberta-base-sentiment-latest"
+  batch_size: 16
+  learning_rate: 2e-5
+  epochs: 3
+  max_length: 128
+  weight_decay: 0.01
+  eval_steps: 100
+  logging_steps: 50
+  # Threshold for binary or multi-class decisions
+  positive_threshold: 0.6
+  negative_threshold: 0.4

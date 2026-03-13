@@ -1,0 +1,16 @@
+tweepy
+python-dotenv
+pandas
+pyyaml
+nltk
+scikit-learn
+joblib
+matplotlib
+seaborn
+transformers
+torch
+datasets
+evaluate
+accelerate
+scipy
+tqdm
